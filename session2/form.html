@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <h1>Create Account</h1>
+        <fieldset>
+            <legend>Registration information</legend>
+            <label for="fisrtname"><b>First name*: </b></label>
+            <input type="text" name="fisrtname" id="fisrtname" placeholder="enter your first name">
+            <label for="lastname"><b> Last name: </b></label>
+            <input type="text" name="lastname" id="lastname" placeholder="enter your last name"><br>
+
+            <label for="email"><b>Email*: </b></label>
+            <input type="text" name="email" id="email" placeholder="enter your email">
+            <label for="phone"><b>Phone*: </b></label>
+            <input type="text" name="phone" id="phone" placeholder="enter your phone number"><br>
+
+            <label for="password"><b>Password*: </b></label>
+            <input type="text" name="password" id="password" placeholder="enter your password">
+            <label for="confirmpassword"><b>Confirm Password*: </b></label>
+            <input type="text" name="confirmpassword" id="confirmpassword" placeholder="enter your password"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal information</legend>
+            <span><b>Gender: </b></span>
+            <input type="radio" name="gender" checked>Male
+            <input type="radio" name="gender">Female
+            <span><b> Hobbies:</b></span>
+            <input type="checkbox">Music
+            <input type="checkbox">Sports
+            <input type="checkbox">Travel
+            <input type="checkbox">Movies<br>
+
+            <label for="soi"><b>Sourse of Income</b></label>
+            <select name="soi" id="soi">
+                <option value="" selected>Employed</option>
+                <option value="">Unemployed</option>
+            </select>
+            <label for="income">Income: </label>
+            <input type="range" name="point" id="income" min="0" max="100"><br>
+
+            <label for=""><b>Age: </b></label>
+            <input type="text" placeholder="18">
+            <label for=""><b>Profile Information: </b></label>
+            <input type="submit" value="Choose file"><span>No file chosen</span><br>
+
+            <label for=""><b>Birthday: </b></label>
+            <input type="date">
+            <label for="">Address: </label>
+            <input type="text"><br>
+
+            <label for="bio">Bio</label>
+            <textarea name="" id="" cols="30" rows="2"></textarea>
+        </fieldset>
+        <input type="submit" value="Create">
+        <input type="submit" value="Reset">
+    </form>
+</body>
+
+</html>
