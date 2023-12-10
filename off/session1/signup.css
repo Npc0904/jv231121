@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+
+}
+thead{
+    background-color: orange;
+    color: yellow;
+}
+table{
+    background-color: gray;
+    color:yellow;
+    border-spacing: 0;
+
+}
+[type="submit"]{
+    background-color: green;
+}
+[disabled="disabled"]{
+    background-color: red;
+}
+tfoot{
+    background-color: orange;
+}
+#day{
+    display: flex;
+}
+.head{
+    text-align: left;
+}
+#cancel{
+    background-color: red;
+}
+

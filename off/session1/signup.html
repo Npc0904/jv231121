@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./signup.css">
+  </head>
+  <body>
+    <table border="0px">
+      <thead>
+        <tr class="head">
+          <th colspan="2" >Sign Up</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr>
+          <td><label for="firstname"></label>First name</td>
+          <td>
+            <input type="text" id="fname" placeholder="Enter First Name" />
+          </td> 
+        </tr>
+        <tr>
+          <td><label for="lastname"></label>Last name</td>
+          <td>
+            <input type="text" id="lname" placeholder="Enter Last Name" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Birthday"></label>Date of Birth
+          </td>
+          <td id="day">
+            <select name="date" id="date">
+            <option value="date">Date</option>
+              <option value="date"></option>
+              <option value="date"></option> </select>
+           <select name="month" id="month">
+              <option value="month">Month</option>
+                <option value="month"></option>
+                <option value="month"></option></select>
+              <select name="year" id="year">
+                <option value="year">Year</option>
+                  <option value="year"></option>
+                  <option value="year"></option></select>
+                </td>
+        </tr>
+        <tr>
+          <td><label for="name">Giới tính</label></td>
+          <td>
+            <input checked name="gender" type="radio" />Nam
+            <input name="gender" type="radio" />Nữ
+          </td>
+        </tr>
+        <tr>
+            <td><label for="country">Country</label></td>
+          <td><select name="country" id="country"> 
+            <option value="a">Country</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+          </select></td>
+        </tr>
+        <tr>
+            <td><label for="email"></label>E-mail</td>
+            <td>
+              <input type="text" id="email" placeholder="Enter E-mail" />
+            </td>
+        </tr>
+        <tr>
+            <td><label for="phone"></label>Phone</td>
+            <td>
+              <input type="text" id="phone" placeholder="Enter Phone" />
+            </td>
+        </tr>
+        <tr>
+          <td><label for="pass"></label>Password</td>
+          <td><input type="password" name="pass" id="pass"></td>
+        </tr>
+        <tr>
+            <td><label for="2pass"></label>Confirm Password</td>
+            <td><input type="password" name="pass" id="pass"></td>
+        </tr>
+        <tr > 
+          <td></td>
+          <td >
+            <input type="checkbox">
+            <span> I Agree to the Terms of use</span></td>
+        </tr>
+      </tbody>
+      <tfoot>
+       <tr> 
+         <td colspan="2"></td>
+        <td >
+          <button type="submit">submit</button>
+          <button id="cancel">Cancel</button>
+        </td>
+       </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

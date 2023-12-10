@@ -1,0 +1,14 @@
+*{margin: 0;
+    padding: 0;
+}
+table{
+    background-color: aqua;
+}
+h1{
+    background-color: yellow;
+    color: red;
+    width: auto;
+}
+button{
+    background-color: gray;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./registor.css">
+  </head>
+  <body>
+    <fieldset>
+      <table border="1px">
+        <thead>
+          <h1>Registor form</h1>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="name">Enter Name</label></td>
+            <!-- <td><input type="text" /></td> -->
+            <td>
+                <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Enter Password</label></td>
+            <td>
+                <input type="password">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Enter Address</label></td>
+            <td>
+                <textarea
+                name=""
+                id=""
+                cols="10"
+                rows="10"
+                style="margin-top: 10px; width: 120px; height: 60px"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="name">Select game</label></td>
+            <td>
+              <input type="checkbox" name="sport" id="hockey" />Hockey <br />
+              <input type="checkbox" name="sport" id="Football" />Football
+              <br />
+              <input type="checkbox" name="sport" id="Badminton" />Badminton
+              <br />
+              <input type="checkbox" name="sport" id="Cricket" />Cricket <br />
+              <input type="checkbox" name="sport" id="voleyball" />voleyball
+            </td>
+          </tr>
+          <tr>
+            <td><label for="name">Giới tính</label></td>
+            <td>
+              <input checked name="gender" type="radio" />Nam
+              <input name="gender" type="radio" />Nữ
+            </td>
+          </tr>
+          <tr>
+            <td><label for="age">Select ur age</label></td>
+            <td>
+              <select name="age" id="age">
+                <option value="select">18</option>
+                <option value="select">19</option>
+                <option value="select">20</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="photo">Select Photo</label></td>
+            <td><input type="file" src="" alt="" /></td>
+          </tr>
+          <td colspan="2">
+            <button>Reset</button>
+            <button>Submit Form</button> <br>
+            <button>submit</button>
+
+            
+          </td>
+        </tbody>
+      </table>
+    </fieldset>
+  </body>
+</html>
