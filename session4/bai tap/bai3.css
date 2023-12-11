@@ -1,0 +1,11 @@
+*{
+    margin: 5px;
+    padding: 0;
+}
+h1{
+    text-align: center;
+}
+.pic{
+    display: flex;
+    justify-content: center;
+}

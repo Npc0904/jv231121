@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    background-image: url(./Unknown.jpeg);
+    background-repeat: no-repeat;
+    background-size:calc(650px);
+    width: 100%;    
+    height: 250px;
+    background-position:center;
+}
+.container{
+    text-align: center;
+    padding-top: 20px;
+}   
+h2,h3{
+    text-align: center;
+    margin: 20px;
+    color:rgba(215, 250, 241, 0.909);
+}
+button{
+    text-align: center;
+    margin: 30px;
+    background-color: red;
+    color: antiquewhite;
+    width:  350px;
+    height: 40px;
+}
+

@@ -1,0 +1,19 @@
+*{
+    margin: 10;
+    padding:10;
+}
+.big{
+    text-align: center;
+}
+.link{
+   display: flex;
+   margin: 10px;
+   justify-content:center;
+   width: 100%;
+}
+#view,#all{
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+
+}
