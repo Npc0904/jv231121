@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("hãy nhập số tháng(1-12)");
+      if (
+        a === 1 ||
+        a == 3 ||
+        a === 5 ||
+        a === 7 ||
+        a === 8 ||
+        a === 10 ||
+        a === 12
+      ) {
+        console.log(`tháng ${a} có 31 ngày`);
+      } else if (a === 4 || a === 6 || a === 9 || a === 11) {
+        console.log(`tháng ${a} có 30 ngày`);
+      } else {
+        console.log(`${a}có 28 ngày`);
+      }
+    
+    </script>
+  </body>
+</html>

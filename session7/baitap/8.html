@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("hay nhap chieu cao");
+      let b = +prompt("hay nhap can nang");
+      let c = b / (a * 2);
+      console.log("chi so bmi cua ban la :", c);
+      if (c < 18.5) {
+        console.log("gay");
+      } else if (18.5 < c < 24.9) {
+        console.log("binh thuong");
+      } else if (c >= 25.0) {
+        console.log("thua can");
+      } else if (25 < c < 29.9) {
+        console.log("tien beo phi");
+      } else if (30 < c < 34.9) {
+        console.log("beo phi do I");
+      } else if (35 < c < 39.9) {
+        console.log("beo phi do II");
+      } else if (c >= 40) {
+        console.log("beo phi do III");
+      }
+    </script>
+  </body>
+</html>

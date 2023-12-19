@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("hay nhap diem toan");
+      let b = +prompt("hay nhap diem li");
+      let c = +prompt("hay nhap diem hoa");
+      let d = +prompt("hay nhap diem van");
+      let e = +prompt("hay nhap diem su");
+      let f = +prompt("hay nhap diem dia");
+
+      let DTB = (a + b + c + d + e + f) / 6;
+      console.log("Diem trung binh:", DTB);
+      if (8 <= DTB <= 10) {
+        console.log("Xep loai gioi");
+      } else if (6.5 <= DTB <= 7.9) {
+        console.log("Xep loai kha");
+      } else if (5 <= DTB <= 6.4) {
+        console.log("Xep loai trung binh");
+      } else if (DTB < 5) {
+        console.log("Xep loai yeu");
+      }
+    </script>
+  </body>
+</html>

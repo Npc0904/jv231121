@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./slider1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+
+}
+.header ul{
+    list-style-type: none;
+}
+.header li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.search{
+    position: absolute;
+    background-color: black;
+    right: 20px;
+    top: 10px;
+
+}
+
+.material-symbols-outlined{
+    color: white;
+}
+.slider{
+    color: white;
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px; 
+}
