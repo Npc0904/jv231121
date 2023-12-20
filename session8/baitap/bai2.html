@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- C1 split -->
+    <script>
+      function reverseString(str) {
+        let array = str.split("");
+        let newArray = array.reverse();
+        let newString = newArray.join("");
+        console.log(newString);
+      }
+      reverseString("hello world");
+    </script>
+
+    <!-- C2 for-->
+    <!-- <script>
+      function reverseString(str) {
+        let newString = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          newString += str[i];
+        }
+        console.log(newString);
+      }
+      reverseString("hello world");
+    </script> -->
+
+    <!-- C3 -->
+    <!-- <script>
+      function reverseString(str) {
+        let newString = "";
+        for (let char of str) {
+          newString = char + newString;
+        }
+        console.log(newString);
+      }
+      reverseString("hello world");
+    </script> -->
+  </body>
+</html>
