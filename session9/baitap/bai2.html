@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseInt(prompt("moi ban nhap so can fix"));
+      let result = " ";
+      for (let i = 0; i < input.length; i++) {
+        let fixednumb = input[i];
+        result += fixednumb;
+        if (fixednumb % 2 == 0 && input[i]) {
+          result += "-";
+        }
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
