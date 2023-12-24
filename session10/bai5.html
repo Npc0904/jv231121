@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cach 1 : countElement 
+    //     function countElement(array, x){
+    //         let count = 0;
+    //         for(let i=0;i<array.length;i++){
+    //             if(array[i]==x)
+    //             count ++;
+    //     }
+    //     console.log(`phan tu ${x} xuat hien ${count} lan `);
+    // }
+    // let a = prompt('Nhap text');
+    // countElement(a);
+
+    // cach 2
+    let a = prompt("moi ban nhap chuuoi");
+        let arr = [];
+        function kiemTra(param) {
+            for (let i = 0; i < param.length; i++) {
+                if (arr.indexOf(param[i]) == -1) {
+                    arr.push(param[i]);
+                }
+            }
+            for (let i = 0; i < arr.length; i++) {
+                let count = 0;
+                for (let j = 0; j < param.length; j++) {
+                    if (arr[i] == param[j]) {
+                        count++;
+                    };
+                    console.log(`ki tu ${arr(i)} xuat hien ${count}`);
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
