@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        object : doi tuong
+        I- Cach khai bao
+        + Cach1 : khai bao bang tu khao let const var
+        bao gom cac cap key(thuoc tinh hoa property) va value ngan cach voi nhau boi dau phay
+        + Cach2 : khai bao bang new object
+        + Cach3 : khai bao bang dum ham tao construction
+        + Cach4 : dung Class (ES6 thay day)
+     -->
+     <!-- Thao tac voi object 
+        CRUD
+        1 . C creat them
+        - khi muon them thuoc tinh cho doi tuong thi chi can lay doi tuong.thuoctinh
+        2 . R read 
+        - doc for-in de doc ra
+        3 . U update
+        4 . D delete (di xoa thuoc tinh)
+        delete studet.age
+      -->
+     <script>
+        // let student={
+        //     name:"hoa",
+        //     age:25
+        // }
+        // let student = new Object({name:"hoa"})
+        // console.log("student",student);
+        // function Student(name,age) {
+        //     this.name=name;
+        //     this.age=age;
+        // }
+        // let student1= new Student("hoa",20);
+        // let Student2= new Student("hong",26);
+        // let Student3= new Student("nhung",27);
+        // console.log("student1",student1);
+        let student = {
+            name:"van",
+            age:20,
+            key_name:100
+
+        };
+        // student.name="nhung";
+        // for (const key_name in student){;
+        //     console.log("key_name",student.key_name);
+        // }
+        delete student.age
+        console.log(student);
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #title {
+        color: red;
+      }
+      .heading{
+        color :aqua;
+      }
+      .toggle{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>attribute</h1>
+    <p class="toggle">bat tac toggle</p>
+    <button onclick="changeAttributte()">bam</button>
+    <img src="https://i.pinimg.com/736x/11/e4/4d/11e44d85743b28fa62121b5ae71a914b.jpg" alt="">
+    <script>
+      function changeAttributte() {
+        let element = document.getElementsByTagName("h1");
+        element[0].id="title";
+        let img = document.getElementsByTagName("img");
+        img[0].src=".//";
+        let classList1=element[0].classList.add(".heading");
+        element.classList.remove(title)
+        let elm = document.getElementsByTagName("p");
+        elm[0].classList.toggle("toggle");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .heading{
+        background-color: brown;
+      }
+      .head{
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">xin chao hoc vien</h1>
+    <button onclick="changeDom()">change</button>
+    <p class="head1"> the p1</p>
+    <p class="head2"> the p2</p>
+    <div class="head"> the div</div>
+    <script>
+      function changeDom() {
+        let getElementById = document.getElementById("title");
+        getElementById.className = "heading";
+        let getElementsByClassName1 = document.getElementsByClassName("head");
+        // getElementsByClassName1[1].style.color = "red";
+        let getElementsByTagName1=document.getElementsByTagName("p");
+        getElementsByTagName1[0].style.fontSize = "50px";
+    }
+    let getElementByQuerySelector = document.querySelector(".head2");
+    // getElementByQuerySelector.style.color="yellow"
+    let getElementByQuerySelectorAll = document.querySelectorAll(".head1");
+    getElementByQuerySelectorAll[1].style.fontSize="100px";
+    // console.log("11111",getElementsByTagName1);
+    </script>
+  </body>
+</html>
