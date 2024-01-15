@@ -22,7 +22,6 @@
     object-fit: cover;
 }
 
-/* .container__images {} */
 
 .container__images--list {
     display: flex;
