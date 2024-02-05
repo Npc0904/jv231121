@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #673ab7;
+  --accent-color: #ffd740;
+  --warn-color: #f44336;
+}
+
+.box-shadow3 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main {
+  min-height: 100vh;
+}

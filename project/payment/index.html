@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-wiadth, initial-scale=1.0" />
+    <title>Payment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+  </head>
+
+  <body>
+    <header class="navbar navbar-expand-sm bd-navbar sticky-top box-shadow3">
+      <nav
+        class="container-xxl bd-gutter flex-wrap flex-lg-nowrap"
+        aria-label="Main navigation"
+      >
+        <a
+          class="p-2 fst-italic fs-3 nav-brand"
+          href="#"
+          style="text-decoration: none"
+        >
+          Web Name
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item main-nav-item">
+            <a class="nav-link" href="../index.html">Products</a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item auth-nav-item">
+              <a class="nav-link" href="auth/login.html">Log In</a>
+            </li>
+            <li class="nav-item auth-nav-item">
+              <a class="nav-link" href="auth/register.html">Register</a>
+            </li>
+            <li class="nav-item main-nav-item">
+              <a
+                class="nav-link btn"
+                type="button"
+                data-bs-toggle="offcanvas"
+                href="#cartOffCanvas"
+                role="button"
+                aria-controls="cartOffCanvas"
+              >
+                <i class="bi bi-cart"></i>
+                <span class="badge text-bg-secondary" id="cartCountItem"></span>
+              </a>
+            </li>
+
+            <li class="nav-item main-nav-item">
+              <div class="dropdown" style="color: white">
+                <button
+                  class="btn dropdown-toggle rounded"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-person-circle" style="font-size: 1.2rem"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item fw-bold" type="button">
+                      <i class="bi bi-person-circle"></i>
+                      <span id="currentUser"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      type="button"
+                      id="logOutButton"
+                    >
+                      <i class="bi bi-box-arrow-left"></i>
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="cartOffCanvas"
+      aria-labelledby="cartOffCanvas"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffCanvasLabel">Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <div class="list-group" id="orderItemList"></div>
+        <div class="container text-center">
+          <div class="row gy-2">
+            <div class="col-12">
+              <a class="btn btn-dark w-100" href="./cart/index.html">
+                Go to the cart
+              </a>
+            </div>
+            <div class="col-12">
+              <button
+                type="button"
+                data-bs-dismiss="offcanvas"
+                class="btn btn-outline-dark w-100 mb-1"
+              >
+                Continue shopping
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container pt-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+          <div class="card">
+            <div class="card-body p-md-5">
+              <div>
+                <h4>Upgrade your plan</h4>
+                <p class="text-muted pb-2">
+                  Please make the payment to start enjoying all the features of
+                  our premium plan as soon as possible
+                </p>
+              </div>
+
+              <div
+                class="px-3 py-4 border border-primary border-2 rounded mt-4 d-flex justify-content-between"
+              >
+                <div class="d-flex flex-row align-items-center">
+                  <img
+                    src="https://th.bing.com/th/id/OIP.Ds8oLQW-OfX79kX5NVkgwgHaE7?pid=ImgDet&amp;rs=1"
+                    class="rounded"
+                    width="60"
+                  />
+                  <div class="d-flex flex-column ms-4">
+                    <span class="h5 mb-1">Small Business</span>
+                    <span class="small text-muted">CHANGE PLAN</span>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <sup class="dollar font-weight-bold text-muted">$</sup>
+                  <span class="h2 mx-1 mb-0">8,350</span>
+                  <span class="text-muted font-weight-bold mt-2">/ year</span>
+                </div>
+              </div>
+
+              <h4 class="mt-5">Payment details</h4>
+
+              <div
+                class="mt-4 d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex flex-row align-items-center">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/000/546/518/large_2x/credit-card-vector.jpg"
+                    class="rounded"
+                    width="70"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="h5 mb-1">Credit Card</span>
+                    <span class="small text-muted">1234 XXXX XXXX 2570</span>
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="CVC"
+                    style="width: 70px"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="mt-2 d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex flex-row align-items-center">
+                  <img
+                    src="https://th.bing.com/th/id/OIP.NCuJsip3EkJXtPPCgjeMcAAAAA?pid=ImgDet&amp;w=450&amp;h=371&amp;rs=1"
+                    class="rounded"
+                    width="70"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="h5 mb-1">Credit Card</span>
+                    <span class="small text-muted">2344 XXXX XXXX 8880</span>
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="CVC"
+                    style="width: 70px"
+                  />
+                </div>
+              </div>
+
+              <h6 class="mt-4 mb-3 text-primary text-uppercase">
+                ADD PAYMENT METHOD
+              </h6>
+
+              <div class="form-outline">
+                <input
+                  type="text"
+                  id="formControlLg"
+                  class="form-control form-control-lg"
+                />
+                <label class="form-label" for="formControlLg"
+                  >Email address</label
+                >
+              </div>
+              <div class="mt-3">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  onclick="removeYourCart()"
+                >
+                  Pay
+                </button>
+                <a href="../index.html">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    style="background-color: white; color: black"
+                  >
+                    Back to home page
+                  </button></a
+                >
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Thank you
+                        </h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        You have just pay order successfully.
+                      </div>
+                      <div class="modal-footer">
+                        <a href="../index.html">
+                          <button type="button" class="btn btn-success">
+                            Continue shopping
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center text-lg-start bg-white text-muted0">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="#!" class="text-reset">Company</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Instagram</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">tiktok</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Twitter</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">About Us</h6>
+              <p>
+                <a href="#!" class="text-reset">Facebook</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Instagram</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">tiktok</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Twitter</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> New York, NY
+                10012, US
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                info@example.com
+              </p>
+              <p>
+                <i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88
+              </p>
+              <p>
+                <i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >Dienmayxanh.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+  <script src="../auth/js/auth.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../product-management/js/product.js"></script>
+  <script src="../cart/js/cart.js"></script>
+  <script src="./js/index.js"></script>
+</html>
