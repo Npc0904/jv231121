@@ -44,6 +44,7 @@ function loadYourCart() {
     const currentProduct = products[orderItem.productId];
     if (!currentProduct) continue;
     let text = `
+
         <div class="list-group-item container-fluid">
             <div class="d-flex justify-content-around">
             <img
